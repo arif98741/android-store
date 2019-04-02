@@ -135,7 +135,7 @@
                     </div>
                     <div class="col-lg-4 mb-lg-0 mb-5 footer-top">
                         <h2>
-                            <a class="navbar-brand" href="#"><i class="fa fa-sun"></i>  গুরত্বপূর্ণ লিংক</a>
+                            <a class="navbar-brand" href="index.html"><i class="fa fa-sun"></i>  গুরত্বপূর্ণ লিংক</a>
                         </h2>
                         <ul class="list-agileits">
                             <li class="my-2">
@@ -163,7 +163,7 @@
                     </div>
                     <div class="col-lg-3 col-sm-3 col-6 footv3-left">
                         <h2>
-                            <a class="navbar-brand" href="#"><i class="fa fa-sun"></i>  যোগাযোগ </a>
+                            <a class="navbar-brand" href="index.html"><i class="fa fa-sun"></i>  যোগাযোগ </a>
                         </h2>
                         <ul class="list-agileits">
                             <li class="my-2">
