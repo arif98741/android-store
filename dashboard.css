@@ -1,0 +1,9 @@
+.navbar-collapse.collapse.d-none,
+#hide-navbar.d-none,
+#show-navbar.d-none {
+	display: none !important;
+}
+
+.navbar-expand #show-navbar.navbar-toggler {
+	display: block;
+}
