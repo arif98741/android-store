@@ -42,14 +42,9 @@
                 <!--/Social-->
                 <!--Search Form-->
                 <li>
-                   <a href="#" class="" ><i class="fab fa-android" style="font-size: 19px; color: #D3B2B2 !important;"></i>&nbsp; All Applications</a>
+                   <a href="#" class="" style="color: #D0ECED;"><i class="fab fa-android" style="font-size: 19px; color: #D3B2B2 !important; padding: 0px 0px 0px 11px;"></i>&nbsp; All Applications</a>
 
-                   <a href="#" class="" ><i class="fas fa-gamepad"  style="font-size: 19px; color: #D3B2B2 !important;"></i>&nbsp; Game Service</a>
-                   
-                   <a href="#" class="" ><i class="far fa-calendar"  style="font-size: 19px; color: #D3B2B2 !important;"></i>&nbsp; Order  Management</a>
-
-
-
+                   <a href="#" class=""  style="color: #D0ECED;"><i class="fas fa-gamepad"  style="font-size: 19px; color: #D3B2B2 !important; padding: 0px 0px 0px 11px;"></i>&nbsp; Game Service</a>
 
 
 
@@ -72,7 +67,7 @@
         </div>
         <ul class="nav navbar-nav nav-flex-icons ml-auto">
             <li class="nav-item">
-                <i class="fa fa-search"></i> <input type="text" class="search-inp" placeholder="Search for apps">
+                <i class="fa fa-search" id="searchbtn" style="cursor: pointer;"></i> <input type="text" id="search-input" class="search-inp" placeholder="Search for apps" style="display: none;">
 
             </li>&nbsp;&nbsp;&nbsp;
 
@@ -114,10 +109,10 @@
 
         <!--Card image-->
         <div class="view view-cascade overlay wow fadeIn">
-         <table class="table">
+         <table class="table" width="100%">
             <thead>
                 <tr>
-                 <th>App Name</th>
+                 <th width="auto">App Name</th>
                  <th>active installs</th>
                  <th>Avg rating total</th>
                  <th>Last Update</th>
@@ -156,9 +151,6 @@
                 <td>January 31, 2019</td>
                 <td>Published</td>
             </tr>
-
-
-
         </tbody>
     </table>
 </div>
@@ -281,6 +273,35 @@
         
         new WOW().init();
 
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            console.log($(window).width());
+
+            $(window).resize(function() {
+                //console.log($(this).width());
+                if ($(this).width() < 768) {
+                    $('table').addClass('table-responsive');
+                }else{
+                     $('table').removeClass('table-responsive');
+                }
+            });
+            var i = 1;
+            $('#searchbtn').click(function(event) {
+                if(i==1)
+                {
+                    $('#search-input').show(500);
+                    i =0;
+                }else{
+                    $('#search-input').hide(500);
+                    i =1;
+                }
+            });
+
+
+
+        });
     </script>
 
 </body>

@@ -2465,7 +2465,7 @@ a.text-light:hover {
 }
 
 .pattern-6 {
-    background: url(../img/overlays/06.png) fixed
+    /*background: url(../img/overlays/06.png) fixed*/
 }
 
 .pattern-7 {
@@ -16486,11 +16486,12 @@ span[data-jarallax-element] {
 }
 
 .sn-bg-3 {
-    background-image: url(https://mdbootstrap.com/img/Photos/Others/sidenav3.jpg)
+    /*background-image: url(https://mdbootstrap.com/img/Photos/Others/sidenav3.jpg)*/
 }
 
 .sn-bg-4 {
-    background-image: url(https://mdbootstrap.com/img/Photos/Others/sidenav4.jpg)
+    background: #fff !important;
+    /*background-image: url(https://mdbootstrap.com/img/Photos/Others/sidenav4.jpg)*/
 }
 
 .side-nav {
