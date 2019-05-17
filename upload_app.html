@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Material Design Bootstrap Template</title>
+    <title>Upload App</title>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
@@ -17,6 +17,8 @@
 
     <!-- Material Design Bootstrap -->
     <link href="assets/public/css/mdb.min.css" rel="stylesheet">
+    <link href="assets/public/css/custom.css" rel="stylesheet">
+
 
 </head>
 
@@ -42,7 +44,7 @@
                 <!--/Social-->
                 <!--Search Form-->
                 <li>
-                   <a href="#" class="" style="color: #D0ECED;"><i class="fab fa-android" style="font-size: 19px; color: #D3B2B2 !important; padding: 0px 0px 0px 11px;"></i>&nbsp; All Applications</a>
+                   <a href="dashboard.html" class="" style="color: #D0ECED;"><i class="fab fa-android" style="font-size: 19px; color: #D3B2B2 !important; padding: 0px 0px 0px 11px;"></i>&nbsp; All Applications</a>
 
                    <a href="#" class=""  style="color: #D0ECED;"><i class="fas fa-gamepad"  style="font-size: 19px; color: #D3B2B2 !important; padding: 0px 0px 0px 11px;"></i>&nbsp; Game Service</a>
 
@@ -63,7 +65,7 @@
         </div>
         <!-- Breadcrumb-->
         <div class="breadcrumb-dn mr-auto">
-            <p>All Applications</p>
+            <p>Upload App</p>
         </div>
         <ul class="nav navbar-nav nav-flex-icons ml-auto">
             <li class="nav-item">
@@ -95,11 +97,7 @@
     <div class="container ">
 
         <div class="row">
-            <div class="offset-md-9 col-md-3">
-             <ul class="list-inline pull-right" style="color: #0277BD;">
 
-                <li class="list-inline-item pull-right"><a href="design.html" class="btn btn-primary" >Create Application!</a></li>
-            </ul> 
         </div>
 
     </div>
@@ -108,56 +106,134 @@
     <div class="card card-cascade wider reverse my-4 pb-5" style="min-height: 400px;">
 
         <!--Card image-->
-        <div class="view view-cascade overlay wow fadeIn">
-         <table class="table" width="100%">
-            <thead>
-                <tr>
-                 <th width="auto">App Name</th>
-                 <th>active installs</th>
-                 <th>Avg rating total</th>
-                 <th>Last Update</th>
-                 <th>Total</th>
-             </tr>
-         </thead>
-         <tbody>
-            <tr>
-                <td>Tutorbot app1.</td>
-                <td>627</td>
-                <td><i class="fas fa-star text-muted">4.3/24</i></td>
-                <td>January 31, 2019</td>
-                <td>Published</td>
-            </tr>
+        <div class=" view-cascade wow ">
+            <h4 style="padding-left: 15px; margin-bottom: 50px;">Product details</h4>
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <p style="padding-left: 15px;">Title* <br>English (United States) - en-US</p>
 
-            <tr>
-                <td>Tutorbot app2</td>
-                <td>627</td>
-                <td><i class="fas fa-star text-muted">4.3/24</i></td>
-                <td>January 31, 2019</td>
-                <td>Published</td>
-            </tr>
+                </div>
+                <div class="col-md-8">
+                    <input type="text" class="form-control non-border">
+                </div>
+            </div>
 
-            <tr>
-                <td>Tutorbot app3</td>
-                <td>627</td>
-                <td><i class="fas fa-star text-muted">4.3/24</i></td>
-                <td>January 31, 2019</td>
-                <td>Published</td>
-            </tr>
+            <div class="row">
+                <div class="col-md-4">
+                    <p style="padding-left: 15px;">Short Description* <br>English (United States) - en-US</p>
 
-            <tr>
-                <td>Tutorbot app4</td>
-                <td>627</td>
-                <td><i class="fas fa-star text-muted">4.3/24</i></td>
-                <td>January 31, 2019</td>
-                <td>Published</td>
-            </tr>
-        </tbody>
-    </table>
+                </div>
+                <div class="col-md-8">
+                    <input type="text" class="form-control non-border">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <p style="padding-left: 15px;">Full Description* <br>English (United States) - en-US</p>
+
+                </div>
+                <div class="col-md-8">
+                    <input type="text" class="form-control non-border">
+                </div>
+            </div>
+
+            <h4 style="padding-left: 15px;margin-top: 20px;">Categorization</h4>
+            <div class="row">
+                <div class="col-md-4">
+                    <p style="padding-left: 15px;">Authorization Type*</p>
+
+                </div>
+                <div class="col-md-8">
+                    <select name="authorization_type" class="form-control">
+                        <option value="">Select an Application Type</option>
+                        <option value="">Select an Application Type</option>
+                        <option value="">Select an Application Type</option>
+                    </select>
+                </div>
+            </div> <hr>
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <p style="padding-left: 15px;">Category*</p>
+
+                </div>
+                <div class="col-md-8">
+                    <select name="authorization_type" class="form-control">
+                        <option value="">Select a category</option>
+                        <option value="">Select an Application Type</option>
+                        <option value="">Select an Application Type</option>
+                    </select>
+                </div>
+            </div> <hr>
+            
+            
+        </div>
+
+
+        <h4 style="padding-left: 15px;margin-top: 20px;">Contact Details</h4>
+        <div class="row">
+            <div class="col-md-4">
+                <p style="padding-left: 15px;">Website</p>
+
+            </div>
+            <div class="col-md-8">
+                <input type="text" class="form-control non-border" placeholder="http://...">            
+           </div>
+       </div> <hr>
+
+       <div class="row">
+            <div class="col-md-4">
+                <p style="padding-left: 15px;">Email*</p>
+
+            </div>
+            <div class="col-md-8">
+                <input type="text" class="form-control non-border text-muted" value="something@gmail.com"> 
+                <small>Please provide an email address where you may be contacted. This email will be publicly displayed with your app</small>           
+           </div>
+       </div> <hr>
+
+       <h4 style="padding-left: 15px;margin-top: 20px;">Privacy Policy</h4>
+       <small style="padding-left: 15px;">If you wish to provide an privacy policy URL for this application, please enter it below. Also please check out our User Data policy to avoid common violations.</small>
+        <div class="row">
+            <div class="col-md-4">
+                <p style="padding-left: 15px;">Website</p>
+
+            </div>
+            <div class="col-md-8">
+                <input type="text" class="form-control non-border" placeholder="http://...">   <input type="checkbox">  &nbsp; &nbsp; Not submitting a privacy URL at this time. <a href="#">Learn more</a>      
+           </div>
+       </div> <hr>
+
+       <h5 style="padding-left: 15px;margin-top: 20px;">Android APK Bundles and APKs to Add</h5>
+       <small style="padding-left: 15px;">These app bundles and APKs will be served in play store after the rollout of this release</small>
+        <div class="row">
+            
+            <div class="col-md-12">
+                <div class="upload-section" >
+                    <small>Drop your app bundles & APKs here, or select a file</small>  <br>
+                    <button>Browse Files</button>
+                </div>     
+           </div>
+       </div> <hr>
+
+       <h5 style="padding-left: 15px;margin-top: 20px;">Screenshots</h5>
+       <small style="padding-left: 15px;">Default - English (en-US)</small>
+       <small style="padding-left: 15px;">JPEG or 24 bin PNG (no alpha). Min length for any side: 320px. Max length for any side: 3840px</small>
+       <small style="padding-left: 15px;">At least <strong>2 screenshots are required</strong> overall. <strong>Max 8 screenshots per type</strong>. Drag to reorder or to move between types</small>
+        <div class="row">
+            
+            <div class="col-md-12">
+                <div class="upload-section" >
+                    <small>At least one phone screenshot to here to help  phone users to see how your app will look on their device</small>  <br>
+                    <button>Browse Files</button>
+                </div>     
+           </div>
+       </div> <hr>
+       <button class="btn btn-primary" style="max-width: 200px;">Save</button>
+
 </div>
-<!--/Card image-->
-
-
-<!--/.Card content-->
 
 </div>
 <!--/.Card-->
@@ -284,9 +360,9 @@
                 if ($(this).width() < 768) {
                     $('table').addClass('table-responsive');
                 }else{
-                     $('table').removeClass('table-responsive');
-                }
-            });
+                 $('table').removeClass('table-responsive');
+             }
+         });
             var i = 1;
             $('#searchbtn').click(function(event) {
                 if(i==1)
