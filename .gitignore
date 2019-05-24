@@ -1,0 +1,11 @@
+.phpintel
+.idea
+*.zip
+*.iml
+uploads
+works
+vendor
+composer.lock
+composer.phar
+phpunit.xml
+.vscode

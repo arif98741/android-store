@@ -1,4 +1,7 @@
-
+<?php 
+include 'config/config.php';
+$link = connection();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,34 +34,34 @@
 
                 <!--/. Logo -->
                 <!--Social-->
-                <li>
+               <!--  <li>
                     <ul class="social">
                         <li><a href="#" class="icons-sm fb-ic"><i class="fab fa-facebook-f"> </i></a></li>
                         <li><a href="#" class="icons-sm pin-ic"><i class="fab fa-pinterest"> </i></a></li>
                         <li><a href="#" class="icons-sm gplus-ic"><i class="fab fa-google-plus-g"> </i></a></li>
                         <li><a href="#" class="icons-sm tw-ic"><i class="fab fa-twitter"> </i></a></li>
                     </ul>
-                </li>
+                </li> -->
                 <!--/Social-->
                 <!--Search Form-->
                 <li>
-                   <a href="#" class="" style="color: #D0ECED;"><i class="fab fa-android" style="font-size: 19px; color: #D3B2B2 !important; padding: 0px 0px 0px 11px;"></i>&nbsp; All Applications</a>
+                 <a href="#" class="" style="color: #D0ECED;"><i class="fab fa-android" style="font-size: 19px; color: #D3B2B2 !important; padding: 0px 0px 0px 11px;"></i>&nbsp; All Applications</a>
 
-                   <a href="design.php" class=""  style="color: #D0ECED;"><i class="fas fa-upload"  style="font-size: 19px; color: #D3B2B2 !important; padding: 0px 0px 0px 11px;"></i>&nbsp; Upload Applcation</a>
+                 <a href="design.php" class=""  style="color: #D0ECED;"><i class="fas fa-upload"  style="font-size: 19px; color: #D3B2B2 !important; padding: 0px 0px 0px 11px;"></i>&nbsp; Upload Applcation</a>
 
-                    <a href="#" class=""  style="color: #D0ECED;"><i class="fas fa-gamepad"  style="font-size: 19px; color: #D3B2B2 !important; padding: 0px 0px 0px 11px;"></i>&nbsp; Game Service</a>
+                 <!--    <a href="#" class=""  style="color: #D0ECED;"><i class="fas fa-gamepad"  style="font-size: 19px; color: #D3B2B2 !important; padding: 0px 0px 0px 11px;"></i>&nbsp; Game Service</a>
 
+                 -->
 
+             </li>
 
-               </li>
-
-               <!--/. Side navigation links -->
-           </ul>
-           <div class="sidenav-bg mask-strong"></div>
-       </div>
-       <!--/. Sidebar navigation -->
-       <!-- Navbar -->
-       <nav class="navbar fixed-top navbar-toggleable-md navbar-expand-lg scrolling-navbar double-nav">
+             <!--/. Side navigation links -->
+         </ul>
+         <div class="sidenav-bg mask-strong"></div>
+     </div>
+     <!--/. Sidebar navigation -->
+     <!-- Navbar -->
+     <nav class="navbar fixed-top navbar-toggleable-md navbar-expand-lg scrolling-navbar double-nav">
         <!-- SideNav slide-out button -->
         <div class="float-left">
             <a href="#" data-activates="slide-out" class="button-collapse"><i class="fas fa-bars"></i></a>
@@ -98,7 +101,7 @@
 
         <div class="row">
             <div class="offset-md-9 col-md-3">
-             <ul class="list-inline pull-right" style="color: #0277BD;">
+               <ul class="list-inline pull-right" style="color: #0277BD;">
 
                 <li class="list-inline-item pull-right"><a href="design.php" class="btn btn-primary" >Create Application!</a></li>
             </ul> 
@@ -111,48 +114,36 @@
 
         <!--Card image-->
         <div class="view view-cascade overlay wow fadeIn">
-         <table class="table" width="100%">
+           <table class="table" width="100%">
             <thead>
                 <tr>
-                 <th width="auto">App Name</th>
-                 <th>active installs</th>
-                 <th>Avg rating total</th>
-                 <th>Last Update</th>
-                 <th>Total</th>
-             </tr>
-         </thead>
-         <tbody>
-            <tr>
-                <td>Tutorbot app1.</td>
-                <td>627</td>
-                <td><i class="fas fa-star text-muted">4.3/24</i></td>
-                <td>January 31, 2019</td>
-                <td>Published</td>
-            </tr>
+                    <th width="auto">Serial</th>
+                   <th width="auto">App Name</th>
+                   <th width="auto">active installs</th>
+                   <th width="auto">Avg rating total</th>
+                   <th width="auto">Last Update</th>
+                   <th width="auto">Status</th>
+               </tr>
+           </thead>
+           <tbody>
 
-            <tr>
-                <td>Tutorbot app2</td>
-                <td>627</td>
-                <td><i class="fas fa-star text-muted">4.3/24</i></td>
-                <td>January 31, 2019</td>
-                <td>Published</td>
-            </tr>
+            <?php 
+            $stmt = $link->prepare("select * from apps order by app_name asc");
+            $stmt->execute();
+            $apps = $stmt->fetchAll(PDO::FETCH_OBJ);
+            $i = 1;
+            foreach ($apps as $app) { ?>
+                <tr>
+                    <td><?php echo $i; ?></td>
+                    <td><?php echo $app->app_name; ?></td>
+                    <td><?php echo $app->app_install; ?></td>
+                    <td><i class="fas fa-star text-muted"><?php echo $app->average_rating; ?></i></td>
+                    <td><?php echo date('F, d Y',strtotime($app->last_update)); ?></td>
+                    <td><?php echo ucfirst($app->status); ?></td>
+                </tr>
 
-            <tr>
-                <td>Tutorbot app3</td>
-                <td>627</td>
-                <td><i class="fas fa-star text-muted">4.3/24</i></td>
-                <td>January 31, 2019</td>
-                <td>Published</td>
-            </tr>
+            <?php $i++;} ?>
 
-            <tr>
-                <td>Tutorbot app4</td>
-                <td>627</td>
-                <td><i class="fas fa-star text-muted">4.3/24</i></td>
-                <td>January 31, 2019</td>
-                <td>Published</td>
-            </tr>
         </tbody>
     </table>
 </div>
@@ -286,9 +277,9 @@
                 if ($(this).width() < 768) {
                     $('table').addClass('table-responsive');
                 }else{
-                     $('table').removeClass('table-responsive');
-                }
-            });
+                   $('table').removeClass('table-responsive');
+               }
+           });
             var i = 1;
             $('#searchbtn').click(function(event) {
                 if(i==1)
