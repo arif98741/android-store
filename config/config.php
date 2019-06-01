@@ -12,7 +12,7 @@
             $link->exec("SET CHARACTER SET utf8");
             return $link;
         } catch (PDOException $exc) {
-            die("Field to Connect with Database" . $exc->getMessage());
+            die("Failed to Connect with Database" . $exc->getMessage());
         }
        
     }
